@@ -1,0 +1,343 @@
+<!doctype html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html
+  class="not-ready lg:text-base"
+  style="--bg: #faf8f1"
+  lang="en-us"
+>
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+  />
+
+  
+  <title>Hugo Blog - My Notes</title>
+
+  
+  <meta name="theme-color" />
+
+  
+  
+  
+  
+  <meta name="description" content="Creating Hugo Blog Create a repository on Github (e.g. daily) # Create Nix Shell nix-shell -p hugo git # Create hugo site (site name is daily) hugo new site daily # cd to daily directory cd daily # git initialization git init # Rename git branch git branch -M main # Adding public which is a publish directory to .gitignore echo &#34;public/&#34; &gt;&gt; .gitignore # Add hugo theme git submodule add https://github." />
+  <meta name="author" content="My Notes" />
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="preload stylesheet" as="style" href="https://moizchinoy.github.io/blog/main.min.css" />
+
+  
+  
+  
+  
+  
+  <link rel="preload" as="image" href="https://moizchinoy.github.io/blog/theme.png" />
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  <script
+    defer
+    src="https://moizchinoy.github.io/blog/highlight.min.js"
+    onload="hljs.initHighlightingOnLoad();"
+  ></script>
+  
+
+  
+  
+  
+
+  
+  <link rel="icon" href="https://moizchinoy.github.io/blog/favicon.ico" />
+  <link rel="apple-touch-icon" href="https://moizchinoy.github.io/blog/apple-touch-icon.png" />
+
+  
+  <meta name="generator" content="Hugo 0.123.7">
+
+  
+  
+  
+  
+  
+  <meta itemprop="name" content="Hugo Blog">
+<meta itemprop="description" content="Creating Hugo Blog Create a repository on Github (e.g. daily) # Create Nix Shell nix-shell -p hugo git # Create hugo site (site name is daily) hugo new site daily # cd to daily directory cd daily # git initialization git init # Rename git branch git branch -M main # Adding public which is a publish directory to .gitignore echo &#34;public/&#34; &gt;&gt; .gitignore # Add hugo theme git submodule add https://github."><meta itemprop="datePublished" content="2024-04-21T16:18:49+10:00" />
+<meta itemprop="dateModified" content="2024-04-21T16:18:49+10:00" />
+<meta itemprop="wordCount" content="279">
+<meta itemprop="keywords" content="" />
+  
+  <meta property="og:title" content="Hugo Blog" />
+<meta property="og:description" content="Creating Hugo Blog Create a repository on Github (e.g. daily) # Create Nix Shell nix-shell -p hugo git # Create hugo site (site name is daily) hugo new site daily # cd to daily directory cd daily # git initialization git init # Rename git branch git branch -M main # Adding public which is a publish directory to .gitignore echo &#34;public/&#34; &gt;&gt; .gitignore # Add hugo theme git submodule add https://github." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://moizchinoy.github.io/blog/posts/hugo-blog/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-04-21T16:18:49+10:00" />
+<meta property="article:modified_time" content="2024-04-21T16:18:49+10:00" />
+
+
+  
+  <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Hugo Blog"/>
+<meta name="twitter:description" content="Creating Hugo Blog Create a repository on Github (e.g. daily) # Create Nix Shell nix-shell -p hugo git # Create hugo site (site name is daily) hugo new site daily # cd to daily directory cd daily # git initialization git init # Rename git branch git branch -M main # Adding public which is a publish directory to .gitignore echo &#34;public/&#34; &gt;&gt; .gitignore # Add hugo theme git submodule add https://github."/>
+
+  
+  
+  
+  <link rel="canonical" href="https://moizchinoy.github.io/blog/posts/hugo-blog/" />
+  
+  
+</head>
+
+  <body class="text-black duration-200 ease-out dark:text-white">
+    <header class="mx-auto flex h-[4.5rem] max-w-3xl px-8 lg:justify-center">
+  <div class="relative z-50 mr-auto flex items-center">
+    <a
+      class="-translate-x-[1px] -translate-y-[1px] text-2xl font-semibold"
+      href="https://moizchinoy.github.io/blog/"
+      >My Notes</a
+    >
+    <div
+      class="btn-dark text-[0] ml-4 h-6 w-6 shrink-0 cursor-pointer [background:url(./theme.png)_left_center/_auto_theme('spacing.6')_no-repeat] [transition:_background-position_0.4s_steps(5)] dark:[background-position:right]"
+      role="button"
+      aria-label="Dark"
+    ></div>
+  </div>
+
+  <div
+    class="btn-menu relative z-50 -mr-8 flex h-[4.5rem] w-[5rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
+    role="button"
+    aria-label="Menu"
+  ></div>
+
+  
+
+  <script>
+    
+    const htmlClass = document.documentElement.classList;
+    setTimeout(() => {
+      htmlClass.remove('not-ready');
+    }, 10);
+
+    
+    const btnMenu = document.querySelector('.btn-menu');
+    btnMenu.addEventListener('click', () => {
+      htmlClass.toggle('open');
+    });
+
+    
+    const metaTheme = document.querySelector('meta[name="theme-color"]');
+    const lightBg = '#faf8f1'.replace(/"/g, '');
+    const setDark = (isDark) => {
+      metaTheme.setAttribute('content', isDark ? '#000' : lightBg);
+      htmlClass[isDark ? 'add' : 'remove']('dark');
+      localStorage.setItem('dark', isDark);
+    };
+
+    
+    const darkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    if (htmlClass.contains('dark')) {
+      setDark(true);
+    } else {
+      const darkVal = localStorage.getItem('dark');
+      setDark(darkVal ? darkVal === 'true' : darkScheme.matches);
+    }
+
+    
+    darkScheme.addEventListener('change', (event) => {
+      setDark(event.matches);
+    });
+
+    
+    const btnDark = document.querySelector('.btn-dark');
+    btnDark.addEventListener('click', () => {
+      setDark(localStorage.getItem('dark') !== 'true');
+    });
+  </script>
+
+  <div
+    class="nav-wrapper fixed inset-x-0 top-full z-40 flex h-full select-none flex-col justify-center pb-16 duration-200 dark:bg-black lg:static lg:h-auto lg:flex-row lg:!bg-transparent lg:pb-0 lg:transition-none"
+  >
+    
+    
+
+    
+  </div>
+</header>
+
+
+    <main
+      class="prose prose-neutral relative mx-auto min-h-[calc(100%-9rem)] max-w-3xl px-8 pb-16 pt-12 dark:prose-invert"
+    >
+      
+
+<article>
+  <header class="mb-16">
+    <h1 class="!my-0 pb-2.5">Hugo Blog</h1>
+
+    
+    <div class="text-sm antialiased opacity-60">
+      
+      <time>Apr 21, 2024</time>
+      
+      
+      
+      
+    </div>
+    
+  </header>
+
+  <section><h2 id="creating-hugo-blog">Creating Hugo Blog</h2>
+<h3 id="create-a-repository-on-github-eg-_daily_">Create a repository on Github (e.g. <em>daily</em>)</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#75715e"># Create Nix Shell</span>
+</span></span><span style="display:flex;"><span>nix-shell -p hugo git
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Create hugo site (site name is daily)</span>
+</span></span><span style="display:flex;"><span>hugo new site daily
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># cd to daily directory</span>
+</span></span><span style="display:flex;"><span>cd daily
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># git initialization</span>
+</span></span><span style="display:flex;"><span>git init
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Rename git branch</span>
+</span></span><span style="display:flex;"><span>git branch -M main
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Adding public which is a publish directory to .gitignore</span>
+</span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;public/&#34;</span> &gt;&gt; .gitignore
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Add hugo theme</span>
+</span></span><span style="display:flex;"><span>git submodule add https://github.com/nanxiaobei/hugo-paper themes/paper
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Configure Hugo to use our theme</span>
+</span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;theme = &#39;paper&#39;&#34;</span> &gt;&gt; hugo.toml
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Add email and name to git config</span>
+</span></span><span style="display:flex;"><span>git config user.email <span style="color:#e6db74">&#39;your email&#39;</span>
+</span></span><span style="display:flex;"><span>git config user.name <span style="color:#e6db74">&#39;your name&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># commit the changes</span>
+</span></span><span style="display:flex;"><span>git commit -m <span style="color:#e6db74">&#34;Initial Commit&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Add remote git repository, instead of usual &#39;origin&#39;, we are using &#39;github&#39;, actually it can be anything</span>
+</span></span><span style="display:flex;"><span>git remote add github &lt;your git repo url&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Push the changes</span>
+</span></span><span style="display:flex;"><span>git push -u github main
+</span></span></code></pre></div><p>To run the hugo server locally, execute following command</p>
+<pre tabindex="0"><code>hugo server
+</code></pre><p>To include draft pages, execute</p>
+<pre tabindex="0"><code>hugo server -D
+</code></pre><p>Execute following command to publish the site</p>
+<pre tabindex="0"><code>hugo
+</code></pre><p>Hugo creates the entire static site in the public directory in the root of your project. This includes the HTML files, and assets such as images, CSS files, and JavaScript files. When you publish your site draft, future, or expired content are not included.</p>
+<p>To include draft content while publishing, run</p>
+<pre tabindex="0"><code>hugo -D
+</code></pre><p>By default the content is published in <em>public</em> directory. Use <em>--destination</em> flag to override it.</p>
+<p>To add new content, execute following</p>
+<pre tabindex="0"><code>hugo new content content/posts/my-first-post.md
+</code></pre><p>The new content is in draft mode and is not published by default.</p>
+<h3 id="for-configuring-deployment-on-github-pages-refer-this-page-host-on-github-pageshttpsgohugoiohosting-and-deploymenthosting-on-github">For configuring deployment on Github Pages, refer this page <a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/">Host on GitHub Pages</a></h3>
+</section>
+
+  
+  
+
+  
+  
+  
+  
+  <nav class="mt-24 flex rounded-lg bg-black/[3%] text-lg dark:bg-white/[8%]">
+    
+    <a
+      class="flex w-1/2 items-center rounded-l-md p-6 pr-3 font-semibold no-underline hover:bg-black/[2%] dark:hover:bg-white/[3%]"
+      href="https://moizchinoy.github.io/blog/posts/random-tmux-notes/"
+      ><span class="mr-1.5">←</span><span>Random Tmux Notes</span></a
+    >
+    
+    
+  </nav>
+  
+  
+
+  
+  
+
+  
+  
+
+  
+
+
+  
+</article>
+
+
+    </main>
+
+    <footer
+  class="opaco mx-auto flex h-[4.5rem] max-w-3xl items-center px-8 text-[0.9em] opacity-60"
+>
+  <div class="mr-auto">
+    &copy; 2025
+    <a class="link" href="https://moizchinoy.github.io/blog/">My Notes</a>
+  </div>
+  <a class="link mx-6" href="https://gohugo.io/" rel="noopener" target="_blank"
+    >Powered by Hugo️️</a
+  >️
+  <a
+    class="link"
+    href="https://github.com/nanxiaobei/hugo-paper"
+    rel="noopener"
+    target="_blank"
+    >✎ Paper</a
+  >
+</footer>
+
+  </body>
+</html>

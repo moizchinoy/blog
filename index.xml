@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>My Notes</title>
+    <link>https://moizchinoy.github.io/blog/</link>
+    <description>Recent content on My Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 27 Jan 2025 00:07:57 +1100</lastBuildDate>
+    <atom:link href="https://moizchinoy.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Nginx Load Balancer</title>
+      <link>https://moizchinoy.github.io/blog/posts/nginx-load-balancer/</link>
+      <pubDate>Mon, 27 Jan 2025 00:07:57 +1100</pubDate>
+      <guid>https://moizchinoy.github.io/blog/posts/nginx-load-balancer/</guid>
+      <description>mkdir learn-nginx cd learn-nginx mkdir load-balancer cd load-balancer&#xA;mkdir -p 1 2 echo &amp;#34;Server 1&amp;#34; &amp;gt; 1/index.html echo &amp;#34;Only And Only Server 1&amp;#34; &amp;gt; 1/1.html echo &amp;#34;Server 2&amp;#34; &amp;gt; 2/index.html docker run -p 8081:80 -d -v ./1:/usr/share/nginx/html --name server-one nginx docker run -p 8082:80 -d -v ./2:/usr/share/nginx/html --name server-two nginx vim nginx.conf&#xA;events { worker_connections 1024; } http { upstream backend { server 192.168.1.114:8081; server 192.168.1.114:8082; } server { location / { proxy_pass http://backend; } } location /one { proxy_pass http://192.</description>
+    </item>
+    <item>
+      <title>Kube Local</title>
+      <link>https://moizchinoy.github.io/blog/posts/kube-local/</link>
+      <pubDate>Sat, 04 May 2024 11:13:49 +1000</pubDate>
+      <guid>https://moizchinoy.github.io/blog/posts/kube-local/</guid>
+      <description> minikube kind microk8s k3d Docker Desktop </description>
+    </item>
+    <item>
+      <title>Dotnet Async History</title>
+      <link>https://moizchinoy.github.io/blog/posts/dotnet-async-history/</link>
+      <pubDate>Mon, 29 Apr 2024 21:27:42 +1000</pubDate>
+      <guid>https://moizchinoy.github.io/blog/posts/dotnet-async-history/</guid>
+      <description> Asynchronous Programming Model (APM) Method based - pair of methods Begin and End methods Event Asynchronous Pattern (EAP) Async method with event handler Task Asynchronous Pattern (TAP) Uses Task as return value </description>
+    </item>
+    <item>
+      <title>Task</title>
+      <link>https://moizchinoy.github.io/blog/posts/task/</link>
+      <pubDate>Mon, 29 Apr 2024 20:50:44 +1000</pubDate>
+      <guid>https://moizchinoy.github.io/blog/posts/task/</guid>
+      <description>Task is a type that represents an operation that will finish in the future. It may represent some code that is running or some event that will happen in future.&#xA;There are 2 types of tasks:&#xA;Delegate Task:&#xA;They are tasks that has code to run. They represent mostly CPU bound tasks - Task Parallel Library (TPL) Promise Task:&#xA;They are tasks that will complete when some event will happen. They represent mostly IO bound tasks - async/await but they can represent anything (e.</description>
+    </item>
+    <item>
+      <title>Hugo Website in Github Pages</title>
+      <link>https://moizchinoy.github.io/blog/posts/hugo-website-in-github-pages/</link>
+      <pubDate>Tue, 23 Apr 2024 23:04:49 +1000</pubDate>
+      <guid>https://moizchinoy.github.io/blog/posts/hugo-website-in-github-pages/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Hugo Website in Azure Storage Container</title>
+      <link>https://moizchinoy.github.io/blog/posts/hugo-website-in-azure-storage-container/</link>
+      <pubDate>Tue, 23 Apr 2024 23:04:37 +1000</pubDate>
+      <guid>https://moizchinoy.github.io/blog/posts/hugo-website-in-azure-storage-container/</guid>
+      <description>In this post we will deploy the hugo website from Github to Azure Storage container. After creating a Hugo Blog, lets deploy the website in Azure Storage container.&#xA;nix-shell -p azure-cli az login # Create resource group az group create --name hugo-resource-group --location eastus # Create storage account - replace &amp;lt;account-name&amp;gt; with a unique name az storage account create --name &amp;lt;account-name&amp;gt; --resource-group hugo-resource-group --location eastus --sku Standard_LRS --kind StorageV2 --allow-blob-public-access false # Enable static website hosting - this will automatically create a container called `$web` container in the storage account which will contain files for our website az storage blob service-properties update --account-name &amp;lt;storage-account-name&amp;gt; --static-website --404-document 404.</description>
+    </item>
+    <item>
+      <title>Configuring MongoDB Shell (mongosh) Prompt (.mongoshrc.js)</title>
+      <link>https://moizchinoy.github.io/blog/posts/mongoshrc/</link>
+      <pubDate>Tue, 23 Apr 2024 18:14:30 +1000</pubDate>
+      <guid>https://moizchinoy.github.io/blog/posts/mongoshrc/</guid>
+      <description>We can customize mongosh prompt through the .mongoshrc.js file which needs to be present in the HOME directory. This file works in windows as well as linux.&#xA;If you&amp;rsquo;re uncertain about the location of your HOME directory, a simple command will reveal its path on both Windows and Linux environments.&#xA;echo $HOME Chuck this in .mongoshrc.js in your $HOME directory.&#xA;(() =&amp;gt; { try { let hostString = &amp;#39;&amp;#39;; const uri = db.</description>
+    </item>
+    <item>
+      <title>Random Tmux Notes</title>
+      <link>https://moizchinoy.github.io/blog/posts/random-tmux-notes/</link>
+      <pubDate>Sun, 21 Apr 2024 16:34:24 +1000</pubDate>
+      <guid>https://moizchinoy.github.io/blog/posts/random-tmux-notes/</guid>
+      <description>tmux&#xA;sessions windows: cb c, cb 0-9, cb p,n panes: cb %,&amp;quot; cb &amp;lt;&amp;ndash;&amp;gt; environment variables&#xA;shell variables</description>
+    </item>
+    <item>
+      <title>Hugo Blog</title>
+      <link>https://moizchinoy.github.io/blog/posts/hugo-blog/</link>
+      <pubDate>Sun, 21 Apr 2024 16:18:49 +1000</pubDate>
+      <guid>https://moizchinoy.github.io/blog/posts/hugo-blog/</guid>
+      <description>Creating Hugo Blog Create a repository on Github (e.g. daily) # Create Nix Shell nix-shell -p hugo git # Create hugo site (site name is daily) hugo new site daily # cd to daily directory cd daily # git initialization git init # Rename git branch git branch -M main # Adding public which is a publish directory to .gitignore echo &amp;#34;public/&amp;#34; &amp;gt;&amp;gt; .gitignore # Add hugo theme git submodule add https://github.</description>
+    </item>
+  </channel>
+</rss>
